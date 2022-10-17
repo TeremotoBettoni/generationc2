@@ -15,11 +15,16 @@
 
         var nombre = 'Teresa';
         var apellido = 'Bettoni';
+        var curso = 2;
         var edad = 28;
         var direccion = 'Villaseca 70'
 
         console.log('     *****','   ', '     *****')
-        console.log (nombre,apellido,edad,direccion);
+        console.log ('Nombre:', nombre);
+        console.log ('Apellido: ',apellido);
+        console.log ('curso: ', curso);
+        console.log ('Edad: ',edad);
+        console.log ('Dirección: ',direccion);
         console.log('                       __');
         console.log('                     .º  º.');
         console.log('                 _.-º/  |  |');
@@ -32,6 +37,40 @@
         console.log('   /  ,-º |  |            |       WASHITURING        |');
         console.log('   |  |    `-º            |                          |');
         console.log('    `-º                    --------------------------');
+
+        /*Variable*/
+        //Espacio de memoria que puede cambiar en el tiempo
+        //tipo de variable: String, number, boolean, null
+        //el tipo de variable, era definido por su contenido (typeof )
+        //el nombre de la variable debe ser significativo
+        
+        // no hacer
+        /*
+        var aRaRaRYTi -> nopo, es muy peligroso
+        var la casa -> no agregar especio
+
+        */
+        /* Hacer
+        var laCasa
+        var la_casa
+        var LACASA -> en mayuscula cuando la variable es CONSTANTE
+       */
+
+        /*Operacion de variable*/
+
+        var num_1 = 24;
+        var num_2 = 35;
+        var num_3 = 11;
+
+        var total_suma = num_1 + num_2 + num_3;
+        var total_resta = num_1 - num_2 - num_3;
+        console.log('suma de valores: ', total_suma);
+        console.log('resta de valores: ', total_resta);
+
+        //sobre escribir la variable
+        var edadAriel=28; //creando y assignando
+        edadAriel=29; // sobre escribiendo
+        console.log('edad de Ariel actual: ', edadAriel);
 
 
     </script>
