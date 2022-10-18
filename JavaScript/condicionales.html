@@ -11,7 +11,7 @@
         //condicionales
         /*la sentencia if
             validar o comprobar algo para tomar alguna decision
-            si la condicion es verdadera ingresara al if
+            si la condicion es verdadera (true) ingresara al if
             condicion ==true
             if(condicion)
             {
@@ -19,7 +19,61 @@
             }
         */
 
+        var edad = parseInt(prompt('Ingresar tu edad',0));
         
+        if(edad>=18)//true
+        {
+            console.log('Es mayor de edad');
+        }
+        if(edad<18){
+            console.log('Es menor de edad')
+        }
+        console.clear();
+        //else
+        if(edad>=18){
+            console.log('Es mayor de edad')
+        }else{
+            console.log('Es menor de edad')
+        }
+        console.log('********************************')
+        //alternativa
+        if(edad<18){
+            console.log('Es menor de edad')
+        }else{
+            console.log('Es mayor de edad')
+        }
+
+        console.log('********************************')
+        /* validar si un numero es mayor a 10 y menor a 20*/
+
+        var numero = parseInt(prompt('ingresa un numero', 0));
+    
+        //conectores && (y), || (o), verlo en archivo Tabla de Verdad
+        //numero <10; numero >10; numero<20; numero>20;
+        //numero =10; numero =20
+
+        if(numero>10 && numero<20)
+        {
+            console.log('esta dentro del rango solicitado')
+        }else{
+            console.log('No esta dentro del rango solicitado')
+        }
+
+        console.log('********************************')
+
+        //validar si un numero es mayor o menor o igual a cero (0)
+
+        var numeroAValidar = parseInt(prompt('Ingresar un numero '));
+
+        if(numeroAValidar==0){
+            console.log('En numero ingresado es igual a cero')
+        }else if (numeroAValidar>0){
+            console.log('El numero es menor a cero')
+        }else {
+            console.log('El numero es mayor a cero')
+        }
+
+
     </script>
     
 </body>
