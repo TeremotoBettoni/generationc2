@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActividadFormulario</title>
+</head>
+<body>
+    <script>
+        
+        //Verificar si es mayor de edad
+        var edad = parseInt(prompt('Ingresar edad', 'edad'));
+        if(edad>=18){
+            console.log('Puedes continuar')
+            
+            //Una vez se valida, hacemos el resto de preguntas
+            var nombre = prompt('Ingresar Nombre', 'Nombre');
+            var apellido = prompt('Ingresar apellido', 'apellido');
+            var correo = prompt('Ingresar correo', 'correo');
+            var direccion = prompt('Ingresar direcccion', 'direccion');
+            var telefono = prompt('Ingresar telefono: +569', 'telefono');
+
+            console.log('     *****','   ', '     *****')
+            console.log ('Nombre:', nombre);
+            console.log ('Apellido: ',apellido);
+            console.log ('Correo: ', correo);
+            console.log ('Edad: ',edad);
+            console.log ('Dirección: ',direccion);
+            console.log ('Telefono: ', telefono);
+
+        }else{
+            console.log('Es menor de edad, no puede continuar')
+        }
+        
+
+    </script>
+</body>
+</html>
