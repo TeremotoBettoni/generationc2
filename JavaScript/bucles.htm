@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles</title>
+</head>
+<body>
+    <script>
+        //bucle FOR
+        //for(let i=0(Variable de inicio); punto de partida y corroboración; condicion de termino incrementar o decrementas)
+        for(let i=0; i<10; i++){
+            console.log('el valor de i es', i);
+        }
+
+        console.clear();
+        //respta : el valor de i es 0
+
+        var numeros_pares = [2,4,6,8,10];
+        numeros_pares[0];
+        console.log('el arreglo es: ',numeros_pares);
+
+        numeros_pares [numeros_pares.length-1]; 
+        /*
+        numeros_pares [numeros_pares.length-1] ; 
+        numeros_pares [5-1];
+        numeros_pares [4];*///posicion 4
+
+        var element=0;//para carpturar el valor final dentro del for se debe definir la varibale fuera de ella 
+        for (let index = 0; index < numeros_pares.length; index++) {
+            element = numeros_pares[index];
+            console.log('La posicion es',index);
+            console.log('el elemento es: ',element);// recorrio el arreglo e imprimio uno a uno lo que estaba dentro
+            console.log('');
+            
+        }
+        console.log('element',element);
+
+        // var : para la creacion de variables globales
+        //let : solo para bloques especificos
+        //const : para bloque especificos, pero se recomiendan para establecer variables constantes (No se cambia al contenido de ella)
+        
+        
+        //variables acumuladoras
+        //variable = variable + algo;
+        var suma_pares = 0;
+        for(let i =0; i<numeros_pares.length; i++){
+            suma_pares = suma_pares + numeros_pares[i];
+            //suma_pares=0+numeros_pares[0];
+            //suma_pares=0+2;
+            //suma_pares=2;
+        }
+
+        console.log('suma total: ',suma_pares);
+
+    </script>
+    
+</body>
+</html>
