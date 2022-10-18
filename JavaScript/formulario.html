@@ -14,7 +14,10 @@
         console.log("              menu usuario")
         console.log("-------------------------------------")
         
-        var edad = parseInt(prompt('Ingresar edad', 'edad'));
+        var edad;
+        do{
+            edad = parseInt(prompt('Ingresar edad', 'ingrese valor numerico'));
+        }while (isNaN(edad));
         
         if(edad>=18){
             console.log('Puedes continuar')
