@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuclesWhile</title>
+</head>
+<body>
+    <script>
+        //WHILE busca validar si esta condicion es verdadera al ighual que el inf, pero mientras sea veradero se va a repetir
+        //CUUIDADO CON DEFINIR COSAS INFINITAS
+        /*while(condicion){
+
+        }*/
+        var contador = 0; //definiendo varieble
+        while(contador<=5){ //validando, mientas sea verdadero entrara al while
+            console.log('Somos bacanes los WashiTuring');
+            contador++; //sumar 1 a la varieble contador por cada vez que entre al while
+        }
+        //contador=6; se incrementa hasta que ya no cumplan con la condicion del while
+        // tanto while como for son bucles, la diferencia es que el for es bueno cuando queremos repetir un ciclo y conocemos el numero de veces a realizar, 
+        //en cambio el while se prefiere cuendo queremos repetir hasta que se cumpla la condicion y no sabemos cuantas repeticiones se necesitan.
+
+        var termino = true; //variablñe booleana (true o false)
+        var contador =190;
+        console.log('contador',contador);
+        //termino cuando el contador sea igual a 200
+        while(termino){ //el while mientras sea verdadero entra  al ciclo, es por ello qque ingresamos el contador
+            contador = contador +10;
+            console.log('contador',contador);
+            if (contador==200){//aqui creamos la condicion de t6ermino de el while, hal hacer false a termino cuanbdo llegue a 200
+                termino =false;
+                
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
