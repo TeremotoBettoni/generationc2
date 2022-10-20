@@ -12,15 +12,33 @@
 	2. Consigue pares hasta 1000: Escribe un programa que entregue la suma de todos los números pares del 1 al 1000 - Puedes usar un operador de módulo para este ejercicio. 
 	
     */
-
+        /* primera forma
         var termino = true;
         var contador = 0;
-        while(termino){
-            contador = contador + 2;
-            console.log("contador",contador)
+        while(termino)
+        {
+            contador = contador + 2; // controlador = 0+2;
+            console.log("contador",contador);
+            
             if(contador==1000)
+            {
                 termino = false;
             }
+                
+        }
+        */
+        
+        var contador = 0;
+        var suma = 0;
+        while (contador <= 1000) 
+        {
+            console.log(contador);
+            contador = contador + 2;
+            suma = suma + contador;
+        }
+        console.log("el total de la suma de los numeros pares es" + suma);
+
+        
     
     </script>
 </body>

@@ -10,15 +10,37 @@
     <script>
     //Ejercicio3. Suma impares hasta 5000: Escribe un programa que devuelva la suma de todos los números impares entre 1 y 5000 (ej: 1+3+5+...+4997+4999).
     
-        var termino = true;
+        /*var termino = true;
         var contador = 1;
-        console.log("contador",contador)
-        while(termino){
+        console.log("contador",contador);
+        document.write('contador',contador);
+        document.write('<br>');
+        while(termino)
+        {
             contador = contador + 2;
-            console.log("contador",contador)
+            console.log("contador",contador);
+            document.write('contador',contador);
+            document.write('<br>');
             if(contador>=4999)
+            {
                 termino = false;
             }
+                
+        }*/
+
+        //2da opcion
+        var contador=1; //defino variable del contador que va a definir que valores son impares
+        var suma = 0; // parta que cuando la sumaemos abajo
+        while (contador<=5000) 
+        {
+            suma=suma+contador; // suma=0+1; suma=1+3+5+7+9....
+            console.log(contador);
+            contador= contador+2;//contador=1+2; contador=3+2 ....
+            
+        
+        }
+        console.log('la suma de todos los impares es:',suma);
+
 
     </script>
 </body>
