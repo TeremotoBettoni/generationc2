@@ -12,7 +12,7 @@
         //conjunto de datos, ordenados segun su ingreso, separados por coma
         //TODOS LOS ARREGLOS COMIENZAN EN LA POSICION CERO (0)
 
-        //arreglo = tamaño predefinido, no puede cambiar
+        //arreglo = tamaño predefinido, no puede cambiar, dentro del arreglo se encuenta el indice
         //lista = tamaño dinamico
         
         var vocales = ["u","i","e","o","a"];
@@ -36,11 +36,11 @@
         //Esto ocure solo en string
         */
         
-        //push, agrega los datos
+        //push, agrega los datos a el arreglo en la ultima parte del indice
         vocales.push('i');
         console.log(vocales);
         
-        //pop, elimina el ultimo dato
+        //pop, elimina el ultimo dato del indice del arreglo
         vocales.pop();
         console.log(vocales);
 
@@ -57,10 +57,9 @@
 
         arreglo1.push(1);// agregando en la ultima posicion en 1
         arreglo1.push(8);
-        console.log(arreglo1);
+        console.log('Arreglo1:',arreglo1);
         var ultimo = arreglo1.pop();
-        console.log(ultimo); //8
-
+        console.log('ultimo',ultimo); //8
 
 
         
