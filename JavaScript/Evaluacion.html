@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion</title>
+</head>
+<body>
+    <script>
+
+        document.write ('El comercio de Jose');
+        console.log ('El comercio de Jose');
+
+        var dia = prompt('Introdusca el dia de la semana en que se encuentra en minuscula', 'lunes');
+        if (dia = 'martes' || dia = 'jueves') 
+        {
+            console.log('tiene 20% de descuento en compra');
+            document.write('tiene 20% de descuento en compra')
+        }
+
+        if (cantidadDeProductos>3)
+        {
+            console.log('cliente resive 5% de descuento')
+            document.write('cliente resive 5% de descuento')
+
+        }
+        
+
+        function verificacion (numero)
+        {
+            var arregloProductos = [];
+            for (let i=0; i<= numero; i++)
+            {
+                i = parseInt(prompt('ingrese valor de producto', 0));
+                arregloProductos.push(i);
+            }
+            return arregloProductos;
+        }
+
+        var cantidadDeProductos = parseInt(prompt('ingresar cuantos produtctos comprara', 0));
+        var miArregloProductos = verificacion(cantidadDeProductos);
+        
+        console.log('los valores de los productos son', miArregloProductos);
+        document.write('los valores de los productos son', miArregloProductos);
+
+
+        var array = [200,5500,900,7000,500,300];
+        console.log(array);
+        var numMayor = 0;
+        for (let i =0; i <=array.length; i++) // Esto me ayudara a recorrer el Array
+        {
+            if (array[i] > numMayor )//Esto ayudara asignar el numero mayyor a la variable numero 
+            { // array[3] = 8
+                numMayor = array[i];
+            }
+        }
+
+        console.log('el numero mayor en el Array es;',numMayor);
+
+        var numMenor = 0;
+        for (let i =0; i <=array.length; i++) // Esto me ayudara a recorrer el Array
+        {
+            if (array[i] < numMenor )//Esto ayudara asignar el numero mayyor a la variable numero 
+            { // array[3] = 8
+                numMenor = array[i];
+            }
+        }
+
+        console.log('el numero menor en el Array es;',numMenor);
+
+
+
+
+
+
+    </script>
+</body>
+</html>
