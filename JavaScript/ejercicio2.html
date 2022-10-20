@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2Pares</title>
+</head>
+<body>
+    <script>
+    /*	
+	2. Consigue pares hasta 1000: Escribe un programa que entregue la suma de todos los números pares del 1 al 1000 - Puedes usar un operador de módulo para este ejercicio. 
+	
+    */
+        /* primera forma
+        var termino = true;
+        var contador = 0;
+        while(termino)
+        {
+            contador = contador + 2; // controlador = 0+2;
+            console.log("contador",contador);
+            
+            if(contador==1000)
+            {
+                termino = false;
+            }
+                
+        }
+        */
+        //segunda forma
+        var contador = 0;
+        var suma = 0;
+        while (contador <= 1000) 
+        {
+            console.log(contador);
+            contador = contador + 2;
+            suma = suma + contador;
+        }
+        console.log("el total de la suma de los numeros pares es" + suma);
+
+        //3ra forma
+        /*console.log("suma del los numeros pares del 1 al 1000")
+        var numPar = 0;
+        for ( i = 0 ; i <= 1000 ; i++)
+        {
+            if(i % 2 == 0)
+            { 
+                numPar = numPar + i
+            }
+        }
+        console.log(numPar);*/
+
+
+        
+    
+    </script>
+</body>
+</html>

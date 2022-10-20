@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio5</title>
+    <title>Ejercicio5MaxArray</title>
 </head>
 <body>
     <script>
@@ -28,16 +28,17 @@
         */
         console.log("dado el array [1,5,2,8] encuentra el numero mayor")
         var array = [1,5,2,8];
+        console.log(array);
         var numMayor = 0;
-        for (let i =0; i <=array.length; i++)
+        for (let i =0; i <=array.length; i++) // Esto me ayudara a recorrer el Array
         {
-            if (array[i] > numMayor )
+            if (array[i] > numMayor )//Esto ayudara asignar el numero mayyor a la variable numero 
             { // array[3] = 8
-                numMayor = array[i]
+                numMayor = array[i];
             }
         }
 
-        console.log(numMayor)
+        console.log('el numero mayor en el Array es;',numMayor);
         
 
     </script>
