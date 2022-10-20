@@ -10,6 +10,20 @@
     <script>
         //Encuentra el promedio (avg): Dado un array con múltiples valores, escribe un programa que devuelva el promedio de los valores (ej: para [1,3,5,7,20] el promedio es 7.2).
         
+        var num =[1,2,3,4,5];// suma=15; prom=15/5=3
+        console.log(num);
+        var prom;
+        var suma=0;
+
+        for (let i= 0 ; i <num.length; i++)
+        {
+            suma = suma + num[i]; // suma = 0 + 1; 1+2=3; 3+3=6; 6+4=10; 10+5=15
+            console.log('el siguiente valor a sumar del arreglo es: ',suma);
+        }
+        
+        prom = suma/num.length; // prom=15/5=3
+        console.log('el promedio de los valores es:',prom);
+
 
     </script>
 </body>
