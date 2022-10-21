@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2do intento de evaluacion</title>
+</head>
+<body>
+    <script>
+        //prijmero presento la pagina
+        document.write ('El comercio de Jose');
+        console.log ('El comercio de Jose');
+
+        //Ejercicio 1
+
+        var dia= "jueves";//"LUNES"//1=lunes.. 2=martes y 4=jueves ; MaRtEs -> martes
+        var productos = [1000,500,650,8000];//10150
+
+        function calculoTotalCompra(pDia,pValoresProductos)
+        {//pDia="lunes";pValoresProductos=[1000,500,650,8000];
+            var totalFinalCompra=0;
+            var sumaProductos=0;
+            for(let i = 0; i < pValoresProductos.length;i++)
+            {
+                sumaProductos = sumaProductos + pValoresProductos[i];
+                
+            }
+            
+            if(pDia.toLowerCase()=="martes" || pDia.toLowerCase()=="jueves")
+            {
+                totalFinalCompra = sumaProductos*0.8;//10150-10150*0.2 o sumaProductos*0.8
+                //totalFinalCompra =sumaProductos*0.8
+            }else{
+                totalFinalCompra = sumaProductos;
+            }
+            return totalFinalCompra;
+        }
+        
+        var total= calculoTotalCompra(dia,productos);
+        console.log("El total de la compra es",total);
+
+
+        /*Don José hace un 5% de descuento a los clientes que compran más de 3 productos y al
+        menos uno de ellos tiene un valor mayor a 10.000, realiza una función que calcule el
+        total verificando si corresponde o no el descuento.*/
+
+        function calculo5 (pproductos)
+        {
+            var totalFinalCompra=0;
+            var sumaProductos=0;
+            for(let i = 0; i < pproductos.length;i++)
+            {
+                sumaProductos = sumaProductos + pproductos[i];
+                if(pproductos.length > 3 && pproductos[i]>=10000)
+                {
+                    totalFinalCompra = sumaProductos*0.05;//10150-10150*0.2 o sumaProductos*0.8
+                    //totalFinalCompra =sumaProductos*0.8
+                }else{
+                    totalFinalCompra = sumaProductos;
+                }
+            }
+
+            return totalFinalCompra;
+        }
+        
+        var totalCompra= calculo5(productos);
+        console.log ("El total de la compra es",totalCompra);
+
+        /*Se desea tener una función verificadora encargada de revisar si dentro de el arreglo de
+        valores de los productos a comprar no existan valores negativos ingresados por error,
+        en caso de no existir debe retornar un mensaje de éxito, en caso contrario debe retornar
+        un mensaje de error junto con el número negativo y el índice en el que se encontraba.*/
+        
+        function verificacion (pproductos)
+        {
+            var arreglo = pproductos [0];
+            var respuesta = 'Todos los valores estan correctos';
+            for (i=0; i <=productos.length; i++)
+            {
+                if (arreglo<0){
+                    respuesta = 'ERROR, hay un número negativo'
+                }else{
+                    respuesta = respuesta
+                }
+            }
+            return respuesta;
+        }
+        var retorno = verificacion(productos);
+        console.log(retorno);
+
+        /*Dado el siguiente arreglo [200,5500,900,7000,500,300] con los valores de cada producto
+        ○ Crea una función que retorne el valor del producto más costoso.
+        ○ Crea una función que retorne el valor del producto menos costoso.*/
+
+        var array = [200,5500,900,7000,500,300];
+        console.log(array);
+        
+        function numMayor()
+        {
+            var maximo = array[0];
+            for (let i =0; i <=array.length; i++) // Esto me ayudara a recorrer el Array
+            {
+                if (maximo < array[i])//Esto ayudara asignar el numero mayyor a la variable numero 
+                { // array[200] = 5500
+                    maximo = array[i];
+                }
+            }
+            return maximo;
+        }
+
+        var valorMaximo = numMayor();
+        console.log('el numero mayor en el Array es;',valorMaximo);
+        
+        function numMenor()
+        {
+            var minimo = array[0];
+            for (let i =0; i <=array.length; i++) // Esto me ayudara a recorrer el Array
+            {
+                if (minimo > array[i])//Esto ayudara asignar el numero mayyor a la variable numero 
+                { // array[200] = 5500
+                    minimo = array[i];
+                }
+            }
+            return minimo;
+        }
+        var valorMinimo = numMenor();
+        console.log('el numero menor en el Array es;',valorMinimo);
+        
+
+    </script>
+</body>
+</html>
