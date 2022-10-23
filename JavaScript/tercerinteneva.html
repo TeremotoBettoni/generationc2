@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvaluacionConSolicitusAUsuario</title>
+</head>
+<body>
+    <script>
+        console.log('El comercio de Don José');
+        document.write ('El comercio de Don José');
+        document.write ('<br>');
+        
+        /* Primero establecemos */
+        var dia = prompt ('Ingresar dia de la semana en que se encuentra', 'lunes');//declaro la valiables de dias la cual sera solicitada a usuario
+        dia = dia.toLowerCase(); // hago que lo ingresado por usuariuo siempre se transforme a miniscula
+        console.log ('El dia de la compra es: ', dia);
+        document.write ('El dia de la compra es: ', dia);
+        document.write ('<br>');
+        
+        var productos = []; // declaro la variable de productos com,o un array bacio
+        var cantidadProductos = parseInt (prompt('Ingresar cantiodad de productos a comprar',0));
+
+        for (let i = 0; i < cantidadProductos; i++){
+            var producto1= parseInt(prompt('Ingresar valor de producto', 0));
+            productos.push(producto1);
+        }
+        console.log ('Los valores de los productos ingresados son: ', productos);
+        document.write ('Los valores de los productos ingresados son: ', productos);
+        document.write ('<br>');
+        
+        /*Don José todos los martes y jueves realiza un 20% de descuento en el total de las
+        compras, crea una función la cual debe recibir un parámetro del día y el arreglo de
+        valores de los productos a comprar, esta debe retornar el total final de la compra según
+        corresponda o no descuento.
+        */
+        
+        function calculoTotalCompra(pDia,pValoresProductos)
+        {//pDia="lunes";pValoresProductos=[1000,500,650,8000];
+            var totalFinalCompra=0;
+            var sumaProductos=0;
+            for(let i = 0; i < pValoresProductos.length;i++)
+            {
+                sumaProductos = sumaProductos + pValoresProductos[i];
+            }
+            
+            if(pDia.toLowerCase()=="martes" || pDia.toLowerCase()=="jueves")
+            {
+                totalFinalCompra = sumaProductos*0.8;//10150-10150*0.2 o sumaProductos*0.8
+                //totalFinalCompra =sumaProductos*0.8
+            }else{
+                totalFinalCompra = sumaProductos;
+            }
+            return totalFinalCompra;
+        }
+        
+        var total= calculoTotalCompra(dia,productos);
+        console.log("El total de la compra es: ",total);
+        document.write("El total de la compra es: ",total);
+        document.write ('<br>');
+
+
+
+
+
+    </script>
+</body>
+</html>
