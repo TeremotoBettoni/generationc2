@@ -53,12 +53,16 @@ select * from usuario u;
 
 -- consultamos los posteos y quien los posteo
 
+-- consulta los usuarios
+
+select * from posteos p ;
+
 select u.userId, u.nombre, u.apellido, p.posId, p.titulo, p.texto  
 from posteos p2 
 inner join posteos p 
 on u.userId = p.idAutor;
 
-
+-- consultamos ahora pero mas especifico 
 select u.userId, u.nombre, u.apellido, p.posId, p.titulo, p.texto, c.detalleCategoria 
 from usuario u 
 inner join posteos p 
