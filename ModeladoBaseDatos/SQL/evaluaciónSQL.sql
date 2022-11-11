@@ -1,4 +1,5 @@
 -- Evaluación SQL
+-- Para este cree una nueva base de datos llamada evaluacion ya que en generationc2 ya tenia demasiadas tablas con nombres similares a los que usare
 
 --------------------------------------------------------------------------------------
 -- primero considerando que son distintos tipos de productos creamos una tablas que desgloce cada tipo
