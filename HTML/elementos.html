@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos HTML</title>
+</head>
+<body>
+    <!--Comentario-->
+    <!--Titulos o heading-->
+    <!--Existen 6 tiepos de comentarios del h1 al h6-->
+    <h1 id="top">Titulo en h1</h1>
+    <h2>Titulo en h2</h2>
+    <h3>Titulo en h3</h3>
+    <h4>Titulo en h4</h4>
+    <h5>Titulo en h5</h5>
+    <h6>Titulo en h6 </h6>
+    <br><!--Salto de linea-->
+    <hr><!--Linea Horizontal-->
+
+    <!--Parrafos-->
+    <p> <b>Hora de estreno en Latinoamérica:</b> <i>Domingos a la 1:30 AM PST (Hora del Pacífico)</i></p>
+    <p><u>Hora de estreno en España: Domingos a las 09:30 (Hora española peninsular)</u></p>
+    <p><b><i><u>Monkey D. Luffy</u></i></b> se niega a que nadie se interponga en su camino para convertirse en Rey de los Piratas. Se lanza a sucar los mares y se convertirá en un capitán dispuesto a no darse por vencido jamás hasta hacerse con el mayor tesoro de la historia: el legendario One Piece.</p>
+    <br>
+    <hr>
+
+    <!--Hipervinculo o anchor-->
+    <a href="https://homer.sii.cl/">Visite al SII</a><br><!--el href es la pagina web a la que nos redigira-->
+    <a href="https://homer.sii.cl/" target="_blank">Visite al SII</a><!--Targuet es para definir como quiero que me redireccione-->
+    <br>
+    <hr>
+
+    <!--Abrir pagina continua-->
+    <a href="pagina2.html">Click para ir a la pagina2</a><br>
+
+    <!--Navegar dentro de la pagina-->
+    <a href="#top">ir arriba</a><br><hr>
+
+    <!--Imagenes--><!--Con width y height vemos el alto y ancho de imagen-->
+    <img src="assets/img/kimPosible.jpg" height="100" alt="Foto Kim Posible"><!--Dejando solo el width o el height es mejor pues segun se establesca uno el otro se ajunsta-->
+    <br>
+    <hr>
+    <!--Mesclar ancor con imagen-->
+    <a href="https://homer.sii.cl/">
+        <img src="assets/img/sii.png" width="100" alt="SII">
+    </a>
+    <br>
+    <hr>
+
+    <!--Listas UL y OL DL DT DD-->
+    <!--Listas ordenadas-->
+    <h2>Personajes de OnePice</h2>
+    <ol>
+        <li>Luffy</li>
+        <li>Chopper</li>
+        <li><ul>
+            <li>Doctor</li>
+        </ul></li>
+        <li>Nami</li>
+        <li>Zoro</li>
+    </ol>
+    
+    <!--Listas desordenadas-->
+    <ul>
+        <li> Personajes
+            <ul>
+                <li>Luffy</li>
+                <li>Chopper</li>
+                <li>Robin</li>
+                <li>Nami</li>
+                <li>Zoro</li>
+            </ul>
+        </li>
+        
+    </ul>
+    <ul>
+        <li>lista grupos</li>
+        <li>
+            <ul>
+                <li>grupo 7
+                    <ul>
+                        <li>Luisa</li>
+                        <li>Jona</li>
+                        <li>Athenas</li>
+                        <li>Camila</li>
+                    </ul>
+                </li>
+                <li>grupo 3</li>
+                <li>grupo 5</li>
+                <li>grupo 1</li>
+                <li>grupo 4</li>
+                <li>grupo 2</li>
+            </ul>
+        </li>
+        
+    </ul>
+    <br><hr>
+
+    <!--Tablas con filas y columnas-->
+    <!-- table: thead tbody-->
+    <table>
+        <thead>
+            <tr><!--Para los titilos solo una-->
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Alejandro</td>
+                <td>ale@gmail.com</td>
+                <td>123456</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Teresa</td>
+                <td>mtbettoni@gmail.com</td>
+                <td>QWER</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Andrea</td>
+                <td></td>
+                <td>5465546</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+</html>

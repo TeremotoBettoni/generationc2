@@ -15,7 +15,7 @@ CREATE TABLE proyyose.recover (
 	idRecover INT  NOT NULL auto_increment,
 	code varchar(10),
 	is_used boolean,
-	idAutor int,
+	idUsuario int,
 	creationDate datetime,
 	PRIMARY KEY (idRecover)
 );
@@ -30,7 +30,7 @@ CREATE TABLE proyyose.posteos (
 	texto varchar(1000) NOT NULL,
 	url varchar(120),
 	creationDate datetime,
-	idAutor int,
+	idUsuario int,
 	idCategoria int,
 	idTypePosteo int,
 	idValoracion int,
@@ -48,7 +48,7 @@ CREATE TABLE proyyose.comentario (
 	idComentario INT  NOT NULL auto_increment,
 	texto varchar(200) NOT NULL,
 	creationDate datetime,
-	idAutor int,
+	idUsuario int,
 	idPosteo int,
 	idValoracion int,
 	PRIMARY KEY (idComentario)
@@ -63,7 +63,7 @@ CREATE TABLE proyyose.valoracion (
 	likeid INT  NOT NULL auto_increment,
 	megusta int,
 	creationDate datetime,
-	idAutor int,
+	idUsuario int,
 	PRIMARY KEY (likeid)
 );
 -- vinculamos los FK
@@ -89,7 +89,7 @@ CREATE TABLE proyyose.typePosteo (
 CREATE TABLE proyyose.Colegas (
 	colabId INT  NOT NULL auto_increment,
 	creationDate datetime,
-	idAutor int,
+	idUsuario int,
 	PRIMARY KEY (colabId)
 );
 -- vinculamos los FK
@@ -100,7 +100,7 @@ alter table Colegas add foreign key(idAutor) references usuario(userId);
 CREATE TABLE proyyose.imagen (
 	imagenid INT  NOT NULL auto_increment,
 	ruta varchar(100),
-	idAutor int,
+	idUsuario int,
 	PRIMARY KEY (imagenid)
 );
 
