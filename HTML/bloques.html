@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Bloques</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #fondo{
+            background-color: grey;
+        }
+        #header{
+            background-color: purple;
+            height: 100px;
+            margin: 10px;
+        }
+
+        .seccion{
+            margin: 10px;
+        }
+
+        #body1{
+            background-color: salmon;
+            width: 22%;
+            height: 314px;
+            display: inline-block;
+            margin-right: 107px;
+        }
+        #body2{
+            background-color: blue;
+            width: 70%;
+            height: 560px;
+            display: inline-block;
+        }
+        .cubiculos{
+            background-color: yellow;
+            width: 250px;
+            height: 250px;
+            display: inline-block;
+            margin: 32px;
+        }
+        
+        #rectangulo{
+            background-color: green;
+            width: 92%;
+            height: 120px;
+            margin-left: 5%;
+        }
+    </style>
+</head>
+<body id="fondo">
+    <div id="header"></div>    
+    <div class="seccion">
+        <div id="body1"></div>
+        <div id="body2">
+            <div class="cubiculos"></div>
+            <div class="cubiculos"></div>
+            <div class="cubiculos"></div>
+            <div id="rectangulo"></div>
+        </div>        
+    </div>
+</body>
+</html>
