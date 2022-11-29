@@ -36,6 +36,11 @@
             color: blueviolet !important;
             background-color: black;
         }
+        .forma1{
+            background-color: whitesmoke;
+            width: 40px;
+            height: 40px;
+        }
         /*2.- a travez del id #*/
         /*se aplica solo a 1 elemento*/
         #parrafo4{
@@ -50,22 +55,13 @@
         }
         /*El border delimita a los elementos hijos*/
         #hijo{
-            background-color: whitesmoke;
-            width: 40px;
-            height: 40px;
             margin: 41%;
         }
         #ojoderecho{
-            background-color: whitesmoke;
-            width: 40px;
-            height: 40px;
             margin-top: -71%;
             margin-left: 62%;
         }
         #ojoizquierdo{
-            background-color: whitesmoke;
-            width: 40px;
-            height: 40px;
             margin-top: -10%;
             margin-left: 21%;
         }
@@ -76,6 +72,7 @@
             margin-top: 27%;
             margin-left: 26%;
         }
+        
     </style>
 </head>
 <body>
@@ -91,10 +88,10 @@
     <!--Margin: distancia entre el elemento y las paredes-->
     <!--Padding: genera margen o distancia sobre los elementos hijos-->
     <div id="padre">
-        <div id="hijo"></div>
-        <div id="ojoderecho"></div>
-        <div id="ojoizquierdo"></div>
-        <div id="boca"></div>
+        <div class="forma1" id="hijo"></div>
+        <div class="forma1" id="ojoderecho"></div>
+        <div class="forma1" id="ojoizquierdo"></div>
+        <div class="forma1" id="boca"></div>
     </div>
 </body>
 </html>
