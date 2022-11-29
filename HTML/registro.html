@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <!--Con action le damos la ruta de donde llevara la informacion-->
+    <!--El Method es la forma en que se envia, usa 2 tipos, el get o el post-->
+    <!--get es cuando enviamos por url mostrando los parametros-->
+    <!--post envia los parametros ocultos-->
+    <form action="ruta" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="ingrese nombre">
+        <br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" placeholder="ingrese apellido">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"placeholder="xxx@gmail.com">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="ingrese password">
+        <br>
+        <input type="submit" value="Enviar">
+        </form>
+</body>
+</html>
