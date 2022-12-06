@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <!--agregamos el jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!--agregamos el bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script>
+        // bloque de jquiery
+        $(document).ready(function(){
+            //se ejecutara TODO lo que esta aca dentro
+            //$('id/clase/elemento').accion();
+            $('#btn1').click(function(){ // la accion click solo gatilla la accion
+                var texto1 = $('#parrafo1').text();// text permite capturar el texto entre las etiquetas o modificarlo
+                console.log(texto1);
+                //alert(texto1);
+                $('#parrafo1').text("Nuevo texto para el parrafo1");
+            }
+            );
+
+            // funciones basicas de JQuery
+            // etiquetas de efecto
+            $('#btn2').click(function(){ // bamos a apretar un boton y cplicar el efecto de ocultar
+                $('#parrafo2').hide();// la funcion hide es para ocultar
+
+            });
+            $('#btn3').click(function(){ // AHORA CREAMOS LA FUNCION PARA MOSTRAR
+                $('#parrafo2').show();// la funcion show volve a MOSTRAR EL TEXTO
+
+            });
+            $('#btn4').click(function(){ // AHORA CREAMOS UN SOLO BOTOS QUE ESCONDA Y MUESTRE
+                $('#parrafo2').toggle();
+            });
+
+            // Slide, EFECFTO DE APARECER Y DESAPARECER PERO DE MANERA DESPLEGADA
+            $('#btn5').click(function(){
+                $('#parrafo3').slideUp();
+            });
+            $('#btn6').click(function(){
+                $('#parrafo3').slideDown();
+            });
+            $('#btn7').click(function(){
+                $('#parrafo3').slideToggle();
+            });
+            
+            // Fade, hace que desaparesca o desvanesca gradualmente
+            $('#btn8').click(function(){
+                $('#parrafo4').fadeIn(5000); // dentro de el parentesis puedo colocar los milisegundos de ejecucion de la desaparicion
+            });
+            $('#btn9').click(function(){
+                $('#parrafo4').fadeOut();
+            });
+            $('#btn10').click(function(){
+                $('#parrafo4').fadeToggle(5000);
+            });
+
+            //MANIPULACION
+            $('#btn11').click(function(){
+                $('#parrafo5').after('<p class="p5">Parrafo after</p>'); // puede ser after o before y adicionara el texto o parafo fuera
+                $('.p5').fadeOut(5000); // aqui podemos asignar el class a el agregado aparte un efecto
+                $('.p5').fadeIn(5000);
+            });
+            $('#btn12').click(function(){ // el appen agrega el texto pero dentro dewl parrafo ya existente 
+                $('#parrafo5').append('<p class="p52">Parrafo append</p>');
+                
+            });
+            $('#btn13').click(function(){ // igual que el appen pero se agrega el texto antes
+                $('#parrafo5').prepend('<p class="p53">Parrafo prepend</p>');
+            });
+            $('#btn14').click(function(){
+                $('#parrafo5').before('<p>Parrafo before</p>'); // puede ser after o before y adicionara el texto o parafo fuera
+            });
+
+            // ATTR o atributo de las etiquetas
+            // agregar un atrubuto a una etiqueta
+            $('#btn15').click(function(){
+                $('#parrafo5').attr("name","np5"); // puede ser after o before y adicionara el texto o parafo fuera
+                $('#parrafo5').attr("width","200px"); 
+                $('#parrafo5').attr("style","color:red; background-color:yellow"); 
+                //$('#parrafo5').attr("style","display:none"); 
+            });
+
+            $('#btn16').click(function(){
+                $('#parrafo6').addClass('fs-1');// con el addclass le otorgamos al apretar el boton la clase fs-1 de bootstrap a el parrafo 6
+                $('#parrafo6').addClass('text-success');
+                $('#parrafo6').addClass('align-middle');
+                
+            });
+            $('#btn17').click(function(){
+                $('#parrafo6').removeClass('fs-1');// en este caso remuevo la clase que adicione
+            });
+            $('#btn18').click(function(){
+                $('#parrafo6').removeClass('text-success'); // removemos este estilo de texto para que agarre elñ siguiente con .css
+                $('#parrafo6').css('color','blue');
+            });
+
+        // cierre de jquery
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <p id="parrafo1">esto es un texto para el parrafo 1</p>
+        <br>
+        <button class="btn btn-success" id="btn1">Click</button>
+        <button class="btn btn-primary">Click2</button>
+        <br><hr>
+        <h2>EFECTOS</h2>
+        <p id="parrafo2">esto es un texto para el parrafo 2</p>
+        <br>
+        <button class="btn btn-success" id="btn2">Hide()</button>
+        <button class="btn btn-success" id="btn3">Show()</button>
+        <button class="btn btn-success" id="btn4">Toggle()</button>
+        <br><hr>
+
+        <p id="parrafo3">esto es un texto para el parrafo3</p>
+        <br>
+        <button class="btn btn-success" id="btn5">SlideUp()</button>
+        <button class="btn btn-success" id="btn6">SlideDown()</button>
+        <button class="btn btn-success" id="btn7">SlideToggle()</button>
+        <br><hr>
+        
+        <p id="parrafo4">esto es un texto para el parrafo4</p>
+        <br>
+        <button class="btn btn-success" id="btn8">FadeIn()</button>
+        <button class="btn btn-success" id="btn9">FadeOut()</button>
+        <button class="btn btn-success" id="btn10">FadeToggle()</button>
+        <br><hr>
+
+        <h2>MANIPULACION</h2>
+        <p id="parrafo5" >Manipular informacion del parrafo 5</p>
+        <br>
+        <button class="btn btn-success" id="btn11">After()</button>
+        <button class="btn btn-success" id="btn12">Append()</button>
+        <button class="btn btn-success" id="btn13">Prepend()</button>
+        <button class="btn btn-success" id="btn14">Before()</button>
+        <button class="btn btn-success" id="btn15">Attr()</button>
+        <br><hr>
+
+        <h2>ESTILOS</h2>
+        <p id="parrafo6" >Manipular ESTILOS del parrafo 6</p>
+        <br>
+        <button class="btn btn-success" id="btn16">AddClass()</button>
+        <button class="btn btn-success" id="btn17">RemoveClass()</button>
+        <button class="btn btn-success" id="btn18">Css()</button>
+        <br><hr>
+    </div>
+    <!--agregamos el js jquery-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
