@@ -13,21 +13,64 @@
         #letra{
             color: white !important;
         }
+        .yose img{
+            width: 10px;
+            height: 10px;
+        }
+        .fondoHF{
+            background-color:#1D2231;
+        }
+        .logo{
+            display: block;
+            margin: auto;
+            padding-top: 2%;
+            width: 60px;
+        }
+        #myBtn {
+            right: 30px;
+            background-color:#FFAC31; /* Set a background color */
+            color: black; /* Text color */
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        
+        #myBtn:hover {
+            background-color: #b16f0c; /* Add a dark-grey background on hover */
+        }
     </style>
 </head>
-<body>
-    <main id="fondo">
-        <div class="container">
+<body id="fondo">
+    <header class="p-3 text" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a class="navbar-brand" href="#">
+                        <img src="Assets/img/yose.png" alt="Logo" width="40" class="d-inline-block align-text-top"></a></li>
+                    <li><a href="#" class="nav-link px-2 text-secondary">Inicio</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Nosotros</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Funciones</a></li>
+                    
+                </ul>
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Registrarse</button>
+                    <button type="button" class="btn btn-warning">Ingresa</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3 my-5">
-                    <form>
+                    <form action="" method="">
                         <div class="mb-3">
                             <label for="email" class="form-label">Correo:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Ingrese correo">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese correo">
                         </div>
                         <div class="mb-3">
-                            <label for="pass1" class="form-label">Contraseña:</label>
-                            <input type="password" class="form-control" id="pass1" placeholder="Ingrese contraseña">
+                            <label for="contraseña" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Ingrese contraseña">
                         </div>
                         <div class="form-check form-check-reverse">
                             <input class="form-check-input" type="checkbox" value="Recordar" id="flexCheckDefault">
@@ -38,16 +81,12 @@
                         </div>
                         <br>
                         <div class="text-center">
-                            <a href="" class="text-warning stretched-link">Recuperar tu contraseña</a>
+                            <a href="" class="text-warning">Recuperar tu contraseña</a>
                         </div>
-                        
-                        
                     </form>
                 </div>
-                <div class="col-1">
-                    
-                </div>
-                <div class="col-md-8">
+                
+                <div class="col-md-9">
                     <div class="ratio ratio-16x9 mx-5 mt-2">
                         <iframe src="assets/img/YOSE!.mp4" title="Video" allowfullscreen></iframe>
                     </div>
@@ -55,6 +94,33 @@
             </div>
         </div>
     </main>
+    <footer class="text-center text-lg-start" id="fondoHF">
+        <div class="container-fluid">
+                <img src="assets/img/LogoYoSe.png" class="logo" alt="LogoYoSe" width="40">
+                <div class="container d-flex justify-content-center py-5">
+                    <a href="https://es-la.facebook.com/" target="_blank">
+                        <img src="assets/img/facebook.png" width="40" alt="facebook">
+                    </a>
+                    <a href="https://twitter.com/?lang=es" target="_blank">
+                        <img src="assets/img/twitter.png" width="40" alt="twitter">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="assets/img/instagram.png" width="40" alt="instagram">
+                    </a>            
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="assets/img/youtube.png" width="40" alt="youtube">
+                    </a>
+                </div>
+        </div>
+                <!-- Copyright -->
+                <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2022 Copyright:
+                    <a class="text-white" href="">YoSe.com</a>
+                    <button onclick="topFunction()" id="myBtn" title="Go to top">Ir arriba</button>
+                </div>
+            <!-- Copyright -->
+        
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
