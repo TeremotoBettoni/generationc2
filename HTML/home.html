@@ -9,11 +9,33 @@
     <!--agregamos el bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Home Yose!</title>
+    <style>
+        #fondo{
+            background-color: rgb(29, 34, 49);
+        }
+
+    </style>
+
 </head>
-<body>
-    <header style="background-color:black">
-        <!--Header con botones-->
-        <h1>hola</h1>
+<body id="fondo">
+    <header class="p-3 text">
+        <div class="container-fluid">
+            <div class="d-flex">
+                
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a class="navbar-brand" href="#">
+                        <img src="Assets/img/yose.png" alt="Logo" width="40" class="d-inline-block align-text-top"></a></li>
+                    <li><a href="#" class="nav-link px-2 text-secondary">Inicio</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Nosotros</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Funciones</a></li>
+                    
+                </ul>
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Registrarse</button>
+                    <button type="button" class="btn btn-warning">Ingresa</button>
+                </div>
+            </div>
+        </div>
     </header>
     
     <main>
