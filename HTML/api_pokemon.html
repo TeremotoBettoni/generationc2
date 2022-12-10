@@ -55,6 +55,7 @@
                 // alert(id); // estro para confirmar que me tome el id
                 // AJAX
                 //$.get(URL,funtion,formato JSON);
+                /*$('#pokemongif').append('<img id="'+i+'" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/'+i+'.gif" alt="pokemongif">');*/
                 $.get('https://pokeapi.co/api/v2/pokemon/'+id,
                 function(respuesta){
                     console.log(respuesta);
@@ -68,7 +69,6 @@
                     $('#nombrepok').text('Nombre: '+nombre);
                     $('#peso').text('Peso: '+peso);
                     $('#tipo').text('Tipo: '+tipo);
-                    
                 }
                 ,'json');
             });
@@ -97,6 +97,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="card" style="width: 37rem; height: 850px;" id="pokecard">
+                        <!--<div id="pokemongif"></div>-->
                         <div class="card-body" style="margin: auto; padding: 50%; ">
                             <p id="nombrepok"></p>
                             <p id="peso"></p>
