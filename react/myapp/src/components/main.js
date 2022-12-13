@@ -2,11 +2,13 @@ import React,{Component} from 'react';
 import CubiculosContent from './cubiculosContent';
 import FoterContent from './foterContent';
 
-class Content extends Component{
+class Main extends Component{
     render(){
         return(
             <div>
-                <h1>Estoy en el contenedor de main</h1>
+                <h1>Estoy en el contenedor Azul</h1>
+                <CubiculosContent />
+                <CubiculosContent />
                 <CubiculosContent />
                 <FoterContent />
             </div>
@@ -15,4 +17,4 @@ class Content extends Component{
 
 }
 
-export default Content;
+export default Main;
