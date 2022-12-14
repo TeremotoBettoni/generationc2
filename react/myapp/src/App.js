@@ -6,11 +6,12 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header name="Teresa" apellido="Bettoni"/>
       <Aside />
-      <Main />
+      <Main titulo="mis cards" prueba="hola mundo"/>
     </div>
   );
 }
+
 
 export default App;
