@@ -18,22 +18,21 @@
     #header{
         min-height: 150px;
         background-color: purple;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
     #navigation{
         min-height: 300px;
         width: 200px;
         background-color: pink;
-        display: inline-block; /*esto es para que se alineen por bloques uno al lado del otro*/
-        vertical-align: top;/*esto es para que se alineen segun la linea superior*/
-        margin-right: 25px;
+        display: inline-block;
+        vertical-align: top;
     }
     #main_content{
         min-height: 400px;
         width: 700px;
         background-color: blue;
         display: inline-block;
-        padding: 10px;
+        padding: 15px;
     }
     .subcontents{
         min-height: 200px;
@@ -47,6 +46,46 @@
         width: 660px;
         background-color: green;
         margin-top: 15px;
+    }
+    /*celular*/
+    @media screen and (max-width: 480px) {
+        #navigation{
+            display: none;
+        }
+        #wrapper{
+            width: 100%;
+        }
+        #main_content{
+            width: 95%;
+        }
+        .subcontents{
+            width: 95%;
+            margin-bottom: 15px;
+        }
+        #advertisement{
+            width: 95%;
+            margin-top: 0px;
+        }
+    }
+    @media screen and (min-width: 481px) and  (max-width: 1023px){
+        #navigation{
+            display: none;
+        }
+        #wrapper{
+            width: 100%;
+        }
+        #main_content{
+            width: 95%;
+        }
+        #advertisement{
+            width: 100%;
+            
+        }
+        .subcontents{
+            width: 45%;
+            margin-bottom: 15px;
+            margin-left: 10px;
+        }
     }
 </style>
 </head>
