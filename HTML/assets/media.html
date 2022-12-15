@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            background-color: gainsboro;
+            height: 400px;
+        }
+        .divclass{
+            width: 20%;
+            height: 20%;
+            display: inline-block;
+        }
+        
+        #div1{
+            background-color: aquamarine;
+        }
+        #div2{
+            background-color: bisque;
+        }
+        #div3{
+            background-color: blueviolet;
+        }
+        /*celular*/
+        @media screen and (max-width: 480px) {
+            .divclass{
+            width: 80%;
+            /*height: 80%;*/
+            display: inline-block;
+            background-color: yellow !important;
+            font-size: 30px;
+            font-weight: 700;
+            }
+            .container{
+            background-color: gainsboro;
+            height: 100%;
+            }
+        
+        }
+        /*tablet*/
+        @media screen and (min-width: 481px) and  (max-width: 1023px){
+            .divclass{
+            width: 40%;
+            /*height: 50%;*/
+            display: inline-block;
+            font-size: 30px;
+            font-weight: 400;
+            }
+        }
+        
+        /*desktop*/
+        @media screen and (min-width: 1024px) {
+        
+        }
+        </style>
+        
+    <title>Media Query</title>
+</head>
+<body>
+    <div class="container">
+        <div class="divclass" id="div1"><p>parrafo1</p></div>
+        <div class="divclass" id="div2"><p>parrafo2</p></div>
+        <div class="divclass" id="div3"><p>parrafo3</p></div>
+    </div>
+</body>
+</html>
