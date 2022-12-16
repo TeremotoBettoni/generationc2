@@ -18,3 +18,5 @@ const getAutos =async(id)=>{ // peticion asincrona que se ejecutara independient
     console.log(respuesta.data);
     return respuesta.data;
 }
+
+export {getAllAutos, getAutos}
