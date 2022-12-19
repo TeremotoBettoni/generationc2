@@ -1,0 +1,118 @@
+:root{
+    --mainColor: #1D2231 ;
+    --textColor: #FFac31;
+    --hoverColor: #E6F4F1;
+    }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+svg{
+    font-size: 25px;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+body {
+    height: 100vh;
+    background-color: #1D2231;
+}
+#side-nav {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 10px;
+    gap: 40px;
+    position: relative;
+    background: var(--mainColor);
+    transition: all 0.3s;
+}
+#side-nav.active {
+    width: 80px;
+}
+#toggle {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    right: -20px;
+    top: 5px;
+    line-height: 45px;
+    text-align: center;
+    color: var(--textColor);
+    background-color: var(--mainColor);
+    border: 4px solid var(--textColor);
+    border-radius: 50%;
+    cursor: pointer;
+}#side-nav.active #toggle svg{
+    transform: rotate(180deg).search-input .user{width: 100%;display: flex;justify-content: space-around;align-items: center.user img {
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 3px 10px rgba(167, 167, 167, 0.4);
+    transition: .5s#side-nav.active .user img{
+    width: 60px;}.user .name{
+font-size: 1.3em;
+color: var(--textColor);
+text-transform: capitalize;
+letter-spacing: 1px;
+transition: 1s;}.user .name span{
+font-size: .8em;
+color: var(--hoverColor);
+font-weight: 200;}.search-input{
+    justify-content: space-between;
+    padding: 6px 10px ;
+    color: var(--textColor);
+    border: 1px solid var(--textColor);
+    border-radius: 9px;
+}
+.search-input input{
+    border: none;
+    background: transparent;
+    padding: 10px ;
+    outline: none;
+}
+.search-input input,
+.search-input input::placeholder{
+    font-size: 18px;
+    color: var(--textColor);
+}
+#side-nav.active .search-input{
+    border: none;
+    justify-content: center;
+    padding: 15px 10px ;
+}
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.nav-list .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: var(--textColor);
+    padding: 15px 10px ;
+    border-radius: 9px;
+}
+.nav-list .nav-link span{
+    text-transform: capitalize;
+    letter-spacing: .7px;
+    font-size: 22px;
+}
+#side-nav.active .nav-link{
+    justify-content: center; 
+}
+#side-nav.active .search-input input,
+#side-nav.active .user .name,
+#side-nav.active  span {
+    display: none;
+}
+#side-nav.active .search-input:hover,
+.nav-list .nav-link:hover {
+    background: var(--hoverColor);
+    color: var(--mainColor);
+}

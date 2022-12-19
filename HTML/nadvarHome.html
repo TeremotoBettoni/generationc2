@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>side bar</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+<style>
+:root{
+  --mainColor: #1D2231 ;
+  --textColor: #FFac31;
+  --hoverColor: #E6F4F1;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    
+  }
+svg{
+      font-size: 25px;
+      cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  background-color: #1D2231;
+}
+#side-nav {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 10px;
+    gap: 40px;
+    position: relative;
+    background: var(--mainColor);
+    transition: all 0.3s;
+}
+#side-nav.active {
+  width: 80px;
+}
+#toggle {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    right: -20px;
+    top: 5px;
+    line-height: 45px;
+    text-align: center;
+    color: var(--textColor);
+    background-color: var(--mainColor);
+    border: 4px solid var(--textColor);
+    border-radius: 50%;
+    cursor: pointer;
+} 
+#side-nav.active #toggle svg{
+  transform: rotate(180deg);
+}
+.search-input ,
+.user{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.user img {
+  width: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 3px 10px rgba(167, 167, 167, 0.4);
+  transition: .5s;
+}
+#side-nav.active .user img{
+  width: 60px;
+}
+.user .name{
+    font-size: 1.3em;
+    color: var(--textColor);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+.user .name span{
+    font-size: .8em;
+    color: var(--hoverColor);
+    font-weight: 200;
+}
+.search-input{
+  justify-content: space-between;
+  padding: 6px 10px ;
+  color: var(--textColor);
+  border: 1px solid var(--textColor);
+  border-radius: 9px;
+}
+.search-input input{
+  border: none;
+  background: transparent;
+  padding: 10px ;
+  outline: none;
+}
+.search-input input,
+.search-input input::placeholder{
+    font-size: 18px;
+    color: var(--textColor);
+}
+#side-nav.active .search-input{
+  border: none;
+  justify-content: center;
+  padding: 15px 10px ;
+}
+.nav-list{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.nav-list .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: var(--textColor);
+  padding: 15px 10px ;
+  border-radius: 9px;
+}
+.nav-list .nav-link span{
+  text-transform: capitalize;
+  letter-spacing: .7px;
+  font-size: 22px;
+}
+#side-nav.active .nav-link{
+  justify-content: center;
+}
+#side-nav.active .search-input input,
+#side-nav.active .user .name,
+#side-nav.active  span {
+  display: none;
+}
+#side-nav.active .search-input:hover,
+.nav-list .nav-link:hover {
+  background: var(--hoverColor);
+  color: var(--mainColor);
+  background-color: #FFac31;
+}
+</style>
+</head>
+<body>
+
+    <nav id="side-nav">
+
+            <div id="toggle">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+
+            <div class="user">
+                <img src="/assets/img/yo.png" alt="" >
+                <h2 class="name">Carlos Ancapi<br>
+                    <span>Full stack developer</span></h2>
+                    
+            </div>
+
+            <div class="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar colegas"></input>
+            </div>
+
+        <div class="nav-list">
+
+            
+            <a href="" class="nav-link">
+                <i class="fa-regular fa-comment"></i>
+                <span>Notificaciones</span>
+            </a>
+
+            
+            <a href="" class="nav-link">
+                <i class="fa-brands fa-first-order"></i>
+                <span>Categorias</span>
+            </a>
+
+            <a href="" class="nav-link">
+                <i class="fa-solid fa-bookmark"></i>
+                <span>publicaciones guardadas</span>
+            </a>
+
+            <a href="" class="nav-link">
+                <i class="fa-solid fa-gear"></i>
+                <span>configuracion cuenta</span>
+            </a>
+
+            <a href="" class="nav-link">
+                <i class="fa-regular fa-user"></i>
+                <span>cerrar sesion</span>
+            </a>
+
+        </div>
+    </nav>
+    
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
