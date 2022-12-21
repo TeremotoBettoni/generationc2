@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {eliminaAuto} from '../components/auto';
 
 class ArrayAuto extends Component {
     render() {
@@ -13,6 +14,7 @@ class ArrayAuto extends Component {
                             <th>Marca</th>
                             <th>Color</th>
                             <th>Propietario</th>
+                            <th>Accion</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -23,6 +25,7 @@ class ArrayAuto extends Component {
                             <td>{au.marca}</td>
                             <td>{au.color}</td>
                             <td>{au.usuario.nombre} {au.usuario.apellido}</td>
+                            <td><button className="btn btn-sm btn-outline-danger" onClick={() => eliminaAuto(au.id)}>Eliminar</button></td>
                         </tr>
                         ))
                         }
