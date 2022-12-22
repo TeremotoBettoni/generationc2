@@ -4,6 +4,7 @@ import axios from 'axios';
 //establer la ruta por default
 const rutaBase = "http://localhost:9080/api2";
 
+
 // funcion de llamado
 const getAllAutos = async()=>{
     const respuesta = await axios.get(rutaBase+"/autos/getall");
@@ -27,8 +28,10 @@ const eliminarAuto = async(id)=>{
 
 const guardarAuto = async(auto)=>{
     //peticion con valor desde body
-    const res = await axios.post(rutaBase+"/guardar/auto", auto);
-    return res.data;
+    const respuesta = await axios.post(rutaBase+"/guardar/auto?usuarioId="+ auto.usuarioId, auto);
+    //axios.post(http://localhost:9080/api2/guardar/auto?usuarioId=1)
+    return respuesta.data;
 }
+
 
 export {getAllAutos,getAuto,eliminarAuto,guardarAuto}

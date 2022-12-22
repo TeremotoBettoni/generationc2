@@ -1,5 +1,7 @@
 import React,{useState, useEffect} from 'react';
-import {eliminarAuto, getAllAutos} from "../services/AutoServices";
+import {guardarAuto, eliminarAuto, getAllAutos} from "../services/AutoServices";
+import ModalAgregarAuto from "../components/modalAgregaAuto";
+import ModalEditarAuto from "../components/modalEditarAuto";
 //import ArrayAuto from './arrayAuto';
 
 // forma de recivir en una variable un arreglo
@@ -9,13 +11,14 @@ const autosInicial=[
         marca: "",
         color: "",
         nombreUser:"",
-        apellidoUser:""
+        apellidoUser:"",
+        usuarioId: 0
     }
 ];
 
 const AutoComponent = ()=>{
     const [autos,setAutos] = useState(autosInicial);
-
+    const [autoEditar, setAutoEditar]= useState(null);
     const obtenerAutos= async()=>{
         setAutos(await getAllAutos());
     }
@@ -25,15 +28,30 @@ const AutoComponent = ()=>{
         await eliminarAuto(autoId)
         setAutos(await getAllAutos())
     }
+
+    const autoAgregar = async(auto)=>{
+        await guardarAuto(auto)
+        setAutos(await getAllAutos())
+    }
+
+    const handleShowEdit = (auto) =>{
+        setAutoEditar(auto);
+    }
+
+
     useEffect(
         ()=>{obtenerAutos()},[]
     );
-
 
     return (
         <>
             <div>
                     <p>Respuesta de la api: </p>
+                    <div>
+                        <ModalEditarAuto autoAgregar={autoAgregar} autoEditar={autoEditar}></ModalEditarAuto>
+                        <ModalAgregarAuto autoAgregar={autoAgregar}/>
+                    </div>
+                    
                     <table className='table'>
                         <thead>
                             <tr>
@@ -52,6 +70,7 @@ const AutoComponent = ()=>{
                                 <td>{au.marca}</td>
                                 <td>{au.color}</td>
                                 <td>{au.nombreUser} {au.apellidoUser}</td>
+                                <td><button className="btn btn-sm btn-outline-danger" onClick={() => handleShowEdit(au)}>Editar</button></td>
                                 <td><button className="btn btn-sm btn-outline-danger" onClick={() => eliminaAuto(au.id)}>Eliminar</button></td>
                             </tr>
                             ))
