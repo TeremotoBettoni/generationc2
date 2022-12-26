@@ -1,0 +1,16 @@
+{
+  "name": "prueba1",
+  "version": "1.0.0",
+  "description": "Esto es un proyecto para inicializar NPM",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "auditar": "npm audit && node app.js"
+  },
+  "author": "teresa bettoni",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4"
+  }
+}
