@@ -7,6 +7,8 @@
 //.execPath para saber donde se encuentra el archiovo node
 //.env es el enviroment o entorno de trabajo
 
+const { urlencoded } = require("express")
+
 //Importar paquetes externos como por ejemplo el de moment
 //var moment = require('moment');
 //console.log(moment('1999-12-31').format('DD/MM/YY').toString());
@@ -16,5 +18,15 @@
 miModulo.multiplicar(10);
 miModulo.dividir(60);*/
 
+// paquetes pre instalados
+/*http, url // para tyrabajar con elementos externos
+path, fs // para tyrabajar con elementos locales*/
+//ejemplo
+/*var util = require('util');
+var http = require('http');
 
-
+var prueba ="10";
+console.log(util.isString(prueba));
+console.log(http);*/
+// uso de Nodemon para que los cambios en la aplicacion se reflecjen automaticos en la consola
+/*console.log("Resultado "+ Math.floor(Math.random()*200));*/
