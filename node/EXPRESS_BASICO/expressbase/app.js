@@ -20,8 +20,6 @@ app.put('/acerca', function(peticion, respuesta){
   respuesta.send("acerca");
 });
 
-
-
 var server = app.listen(3000,  function(){
 
 });
