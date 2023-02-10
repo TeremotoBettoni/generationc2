@@ -1,0 +1,11 @@
+{
+  "name": "copiar",
+  "version": "1.0.0",
+  "description": "practica de cipiado de archivos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
