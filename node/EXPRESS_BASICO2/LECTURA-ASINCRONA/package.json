@@ -1,0 +1,11 @@
+{
+  "name": "lectura",
+  "version": "1.0.0",
+  "description": "Proyecto para lectura de carpetas",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Teresa Bettoni",
+  "license": "ISC"
+}
