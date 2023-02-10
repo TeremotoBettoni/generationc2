@@ -1,0 +1,19 @@
+{
+  "name": "escritura",
+  "version": "1.0.0",
+  "description": "practica de escritura de archivos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeremotoBettoni/generationc2.git"
+  },
+  "author": "Teresa Bettoni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeremotoBettoni/generationc2/issues"
+  },
+  "homepage": "https://github.com/TeremotoBettoni/generationc2#readme"
+}
