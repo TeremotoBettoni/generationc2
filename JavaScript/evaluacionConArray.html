@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var dia= "jueves";//"LUNES"//1=lunes.. 2=martes y 4=jueves ; MaRtEs -> martes
+        var productos = [15000,500,650,8000];//10150
+
+        let total = productos.reduce((a,b) => a + b, 0);
+        console.log(total);
+
+        function decuento(pDia,pTotal){
+            var totalFinalCompra=0;
+            if(pDia.toLowerCase()=="martes" || pDia.toLowerCase()=="jueves")
+            {
+                totalFinalCompra = total*0.8;//10150-10150*0.2 o sumaProductos*0.8
+                //totalFinalCompra =sumaProductos*0.8
+            }else{
+                totalFinalCompra = total;
+            }
+            return totalFinalCompra;
+        }
+
+        var venta= decuento(dia,total);
+
+        console.log("El total de la compra con descuento de 20% es: ",venta);
+
+
+        function calculo5 (pproductos)
+        {
+            var totalFinalCompra=0;
+            var sumaProductos=0;
+            var mayorDiezMil= false;
+            var contador = 0;
+            for(let i = 0; i < pproductos.length;i++)
+            {
+                sumaProductos = sumaProductos + pproductos[i];
+                //producto.some((a) => a > 10000);
+                if(pproductos[i]>10000)
+                {
+                    mayorDiezMil=true;
+                    console.log("tiene producto mayor a 10000");
+                    contador++;
+                }else{
+                    console.log("NO tiene producto mayor a 10000");
+                }
+            }
+            if(pproductos.length > 3 && contador > 0)
+                {
+                    totalFinalCompra = sumaProductos*0.95;//10150-10150*0.2 o sumaProductos*0.8
+                    //totalFinalCompra =sumaProductos*0.8
+                    console.log("tiene mas de 3 pproductos");
+                }else{
+                    totalFinalCompra = sumaProductos;
+                }
+            return totalFinalCompra;
+        }
+        
+        var totalCompra= calculo5(productos);
+        console.log ("El total de la compra con descuento de mas de 3 es:",totalCompra);
+
+    </script>
+    
+
+</body>
+</html>
